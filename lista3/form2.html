@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+
+    <meta charset="utf-8">
+    <title>Wrocław - miasto spotkań</title>
+    <meta name="description" content="Jest to przykładowa witryna dotycząca miasta Wrocławia">
+    <meta name="author" content="Kacper Suchanek, Tomasz Płóciennik">
+    <meta name="keywords" content="Wrocław,miasto,zwiedzanie,województwo dolnośląskie,polska">
+
+</head>
+
+<body>
+    <form action="form2.html" method="get">
+
+        <label for="color">Wybierz ulubiony kolor:</label>
+        <input type="color" name="color" id="color"><br>
+
+        <label for="month">Wybierz ulubiony miesiąc:</label>
+        <input type="month" name="month" id="month"><br><br>
+
+        <label for="range">Wybierz ulubioną liczbę z przedziału 0-9:</label>
+        <input type="range" name="range" id="range" value="5" min="0" max="9" oninput="this.nextElementSibling.value = this.value">
+        <output>5</output><br><br>
+
+        <label for="search">Ulubione słowo:</label>
+        <input type="search" name="search" id="search" placeholder="Żaba"><br><br>
+
+        <label for="url">Adres ulubionej strony:</label>
+        <input type="url" name="url" id="url" placeholder="https://wp.pl"><br><br>
+
+        <input type="submit" value="Wyślij"><br>
+        <input type="reset" value="Wyczyść"><br>
+
+
+    </form>
+
+
+    <br><br>
+    <a href="index.html">Powrót na stronę główną</a>
+</body>

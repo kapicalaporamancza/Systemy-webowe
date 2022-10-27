@@ -1,0 +1,14 @@
+body {
+    margin: auto;
+    background-color: #BFC0C0;
+    color: #483C46;
+    width: 1000px;
+}
+
+#external {
+    font-size: 12px;
+    color: #BFC0C0;
+    text-decoration: double;
+    background-color: #483C46;
+    padding: 20px;
+}

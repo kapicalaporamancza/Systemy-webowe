@@ -12,3 +12,67 @@ body {
     background-color: #483C46;
     padding: 20px;
 }
+
+#mainheader {
+    background-color: #594D57;
+    color: white;
+    padding: 10px;
+    margin-top: 0px;
+}
+
+h1 {
+    text-align: center;
+}
+
+.menu {
+    list-style: none;
+    font-size: 19px;
+    text-align: center;
+}
+
+.menu a {
+    text-decoration: none;
+    color: #BFC0C0;
+    padding-left: 40px;
+    padding-right: 40px;
+}
+
+.menu a:hover {
+    color: #DFE2E2;
+}
+
+.sizes>p {
+    margin-bottom: 20px;
+}
+
+#em2 {
+    font-size: 2em;
+}
+
+#em02 {
+    font-size: 0.7em;
+}
+
+#px15 {
+    font-size: 15px;
+}
+
+#px10 {
+    font-size: 10px;
+}
+
+#pt20 {
+    font-size: 20pt;
+}
+
+#pt25 {
+    font-size: 25pt;
+}
+
+#pc200 {
+    font-size: 200%;
+}
+
+#pc100 {
+    font-size: 100%;
+}

@@ -1,0 +1,55 @@
+body {
+    padding: 0px;
+    margin: 0px;
+}
+
+#mainpage {
+    background-image: url("img2.jpg");
+    height: 1000px;
+    padding: 0px;
+    margin: 0px;
+}
+
+.menu {
+    background-color: goldenrod;
+    padding: 20px;
+    margin-bottom: 30px;
+    height: 100px;
+    margin-top: 100px;
+    text-align: center;
+
+}
+
+h1 {
+    margin-top: 0px;
+    margin-bottom: 0px;
+    text-align: center;
+}
+
+#back1 {
+    background-image: url('ok_icon.png');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+}
+
+
+#back2 {
+    background-image: url('ok_icon.png');
+    background-repeat: repeat-x;
+    background-position: right bottom;
+    background-attachment: fixed;
+}
+
+#back3 {
+    background-image: url('ok_icon.png');
+    height: 50%;
+    width: 100%;
+    position: absolute;
+    background-repeat: space;
+    background-attachment: fixed;
+}
+
+p {
+    font-size: large;
+}

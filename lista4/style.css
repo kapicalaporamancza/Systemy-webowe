@@ -76,3 +76,41 @@ h1 {
 #pc100 {
     font-size: 100%;
 }
+
+#linklist {
+    font-size: 14pt;
+}
+
+#pwr {
+    list-style-type: circle;
+}
+
+#wa {
+    list-style-type: armenian;
+}
+
+#wb {
+    list-style-type: decimal-leading-zero;
+}
+
+.links>li {
+    list-style-type: square;
+}
+
+.links a {
+    text-decoration: none;
+    color: black;
+}
+
+.links a:hover {
+    color: #555555;
+}
+
+#form {
+    margin-top: 20pt;
+    margin-left: 20pt;
+}
+
+.input {
+    margin-bottom: 10pt;
+}

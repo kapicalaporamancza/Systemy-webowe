@@ -114,3 +114,170 @@ h1 {
 .input {
     margin-bottom: 10pt;
 }
+
+#fweight {
+    font-weight: bold;
+}
+
+#fstyle {
+    font-style: italic;
+}
+
+#fvariant {
+    font-variant: small-caps;
+}
+
+#fsize {
+    font-size: 20pt;
+}
+
+#fcolor {
+    color: #483C46;
+}
+
+#lheight {
+    line-height: 2em;
+}
+
+#ffamily {
+    font-family: "Times New Roman", Times, serif;
+}
+
+#textheader {
+    background-color: #594D57;
+    color: white;
+    padding: 10px;
+    margin-top: 0px;
+    border-width: 10px;
+    border-style: dotted;
+    border-color: #ff09d6;
+}
+
+thead {
+    background-color: #594D57;
+    color: white;
+    padding: 10px;
+    margin-top: 0px;
+    border-width: 10px;
+    border-style: dotted;
+    border-color: #ff09d6;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+table td,
+table th {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+table tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+@media screen and (max-width: 1000px) {
+    table {
+        display: none;
+    }
+}
+
+
+#tablereplacment {
+    display: inline;
+    color: red;
+    font-size: 500%;
+}
+
+#tablereplacment2 {
+    display: none;
+}
+
+@media screen and (min-width: 1000px) {
+    #tablereplacment {
+        display: none;
+    }
+}
+
+
+@media print {
+    table {
+        display: none;
+    }
+
+    #tablereplacment2 {
+        display: inline;
+        color: red;
+        font-size: 500%;
+    }
+}
+
+.parent {
+    display: block;
+    position: relative;
+    float: left;
+    line-height: 80px;
+    background-color: #633501;
+    border-right: #CCC 1px solid;
+    font-size: 30px;
+}
+
+.parent a {
+    margin: 10px;
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
+.parent:hover>ul {
+    display: block;
+    position: absolute;
+}
+
+.child {
+    display: none;
+}
+
+.child li {
+    background-color: #E4EFF7;
+    line-height: 50px;
+    border-bottom: #CCC 1px solid;
+    border-right: #CCC 1px solid;
+    width: 100%;
+}
+
+.child li a {
+    color: #000000;
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0px;
+    min-width: 10em;
+}
+
+ul ul ul {
+    left: 100%;
+    top: 0;
+    margin-left: 1px;
+}
+
+li:hover {
+    background-color: #ff7b00;
+}
+
+.parent li:hover {
+    background-color: #F0F0F0;
+}
+
+.expand {
+    font-size: 12px;
+    float: right;
+    margin-right: 5px;
+}
+
+.expand::before {
+    content: "\25BC";
+}

@@ -299,3 +299,35 @@ li:hover {
 .expand::before {
     content: "\25BC";
 }
+
+input:enabled {
+    background-color: #594D57;
+    color: white;
+    margin: 10px;
+}
+
+input:disabled {
+    background-color: #000000;
+    color: white;
+    margin: 10px;
+}
+
+
+
+input:focus {
+    background-color: #ff7b00;
+    color: white;
+    margin: 10px;
+}
+
+p:empty {
+    background-color: #594D57;
+    color: white;
+    margin: 100px;
+    width: 100px;
+    height: 100px;
+}
+
+*:required {
+    border: 2px solid red;
+}

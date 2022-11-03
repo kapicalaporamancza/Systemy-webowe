@@ -178,6 +178,29 @@ table tr:nth-child(even) {
     background-color: #f2f2f2;
 }
 
+table tr:hover {
+    background-color: #ddd;
+}
+
+table tr:nth-last-child(4) {
+    background-color: #594D57;
+    color: white;
+}
+
+table tr:active {
+    background-color: #594D57;
+    color: white;
+}
+
+#RODO:checked {
+    background-color: #594D57;
+    color: white;
+    margin: 10px;
+}
+
+
+
+
 @media screen and (max-width: 1000px) {
     table {
         display: none;
@@ -272,11 +295,6 @@ li:hover {
     background-color: #F0F0F0;
 }
 
-.expand {
-    font-size: 12px;
-    float: right;
-    margin-right: 5px;
-}
 
 .expand::before {
     content: "\25BC";

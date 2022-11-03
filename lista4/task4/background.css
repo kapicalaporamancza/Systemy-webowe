@@ -53,3 +53,57 @@ h1 {
 p {
     font-size: large;
 }
+
+
+div.a {
+    position: relative;
+    width: 400px;
+    height: 200px;
+    border: 3px solid red;
+}
+
+div.b {
+    position: absolute;
+    left: -20px;
+    width: 100px;
+    height: 120px;
+    border: 3px solid blue;
+}
+
+div.c {
+    position: absolute;
+    left: 150px;
+    top: 250px;
+    width: 200px;
+    height: 120px;
+    border: 3px solid green;
+}
+
+div.d {
+    position: absolute;
+    right: 150px;
+    width: 200px;
+    height: 120px;
+    border: 3px solid yellow;
+}
+
+div.e {
+    position: static;
+    width: 400px;
+    height: 200px;
+    border: 3px solid red;
+}
+
+.fl {
+    float: left;
+    width: 200px;
+    height: 120px;
+    border: 3px solid blueviolet;
+}
+
+.cl {
+    clear: both;
+    width: 200px;
+    height: 120px;
+    border: 3px solid black;
+}

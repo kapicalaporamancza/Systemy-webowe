@@ -17,8 +17,26 @@ function randomNum() {
     let f2 = Math.floor(f1)
     document.getElementById("randNum").innerHTML = `The number is: ${f1}<br>The floor is: ${f2}`
 }
+
+function fun3() {
+    let p = document.getElementById("p1")
+    p.innerHTML = "paragraph"
+    const s1 = prompt("Enter number:")
+    if (parseInt(s1) > 0 && parseInt(s1) < 20) {
+        let n = 0
+
+        while (n < s1) {
+            p.innerHTML += `<br> ${n}`
+            n++
+        }
+    } else {
+        alert("Your number must be bigger than 0 and smaller than 20")
+        fun3()
+    }
+}
 const b2 = document.getElementById("but2")
 const b1 = document.getElementById("but1")
+const b3 = document.getElementById("but3")
 
 function buttonCol() {
     b1.style.backgroundColor = "blue"
@@ -35,3 +53,5 @@ b2.onclick = () => {
 b1.addEventListener("mouseover", buttonCol)
 // b1.addEventListener("mouseout", b1.style.backgroundColor = " #d6d6c2")
 document.addEventListener("click", randomNum)
+
+b3.addEventListener("click", fun3)

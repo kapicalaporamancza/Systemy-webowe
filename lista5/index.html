@@ -55,4 +55,31 @@
             }
         }
     </script>
+    <br><br>
+    <input type="submit" value="Uruchom 2 zagadkę" id="start" />
+    <script>
+        document.getElementById("start").onclick = function () {
+            var liczba = Math.floor(Math.random() * 100) + 1;
+            var trafiony = false;
+            while (!trafiony) {
+                var strzal = prompt("Zgadnij liczbę od 1 do 100");
+                if (isNaN(strzal)) {
+                    alert("To nie jest liczba!");
+                    continue;
+                }
+                if (strzal < 1 || strzal > 100) {
+                    alert("Liczba spoza zakresu!");
+                    continue;
+                }
+                if (strzal == liczba) {
+                    alert("Trafiony!");
+                    trafiony = true;
+                } else if (strzal > liczba) {
+                    alert("Za dużo!");
+                } else {
+                    alert("Za mało!");
+                }
+            }
+        }
+    </script>
 </body>

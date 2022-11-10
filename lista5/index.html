@@ -25,32 +25,40 @@
         var licznik = 0;
         var proby = 3;
         var trafiony = false;
-        document.getElementById("check").onclick = function () {
-            if (trafiony) {
+        document.getElementById("check").onclick = function ()
+        {
+            if (trafiony)
+            {
                 dokument.getElementById("wynik").innerHTML = "Już wygrałeś!";
                 return;
             }
-            if (proby == 0) {
+            if (proby == 0)
+            {
                 document.getElementById("wynik").innerHTML = "Przegrałeś!";
                 return;
             }
             proby--;
             licznik++;
             var strzal = document.getElementById("answer").value;
-            if (isNaN(strzal)) {
+            if (isNaN(strzal))
+            {
                 document.getElementById("wynik").innerHTML = "To nie jest liczba!";
                 return;
             }
-            if (strzal < 1 || strzal > 100) {
+            if (strzal < 1 || strzal > 100)
+            {
                 document.getElementById("wynik").innerHTML = "Liczba spoza zakresu!";
                 return;
             }
-            if (strzal == liczba) {
+            if (strzal == liczba)
+            {
                 document.getElementById("wynik").innerHTML = "Trafiony! Zgadłeś w " + licznik + " próbach.";
                 trafiony = true;
-            } else if (strzal > liczba) {
+            } else if (strzal > liczba)
+            {
                 document.getElementById("wynik").innerHTML = "Za dużo! Pozostało prób: " + proby;
-            } else {
+            } else
+            {
                 document.getElementById("wynik").innerHTML = "Za mało! Pozostało prób: " + proby;
             }
         }
@@ -58,25 +66,34 @@
     <br><br>
     <input type="submit" value="Uruchom 2 zagadkę" id="start" />
     <script>
-        document.getElementById("start").onclick = function () {
+        document.getElementById("start").onclick = function ()
+        {
             var liczba = Math.floor(Math.random() * 100) + 1;
             var trafiony = false;
-            while (!trafiony) {
-                var strzal = prompt("Zgadnij liczbę od 1 do 100");
-                if (isNaN(strzal)) {
+            var proby = 0;
+            while (!trafiony)
+            {
+                var strzal = prompt("Zgadnij liczbę od 1 do 100, masz nieograniczoną liczbę prób");
+                if (isNaN(strzal))
+                {
                     alert("To nie jest liczba!");
                     continue;
                 }
-                if (strzal < 1 || strzal > 100) {
+                if (strzal < 1 || strzal > 100)
+                {
                     alert("Liczba spoza zakresu!");
                     continue;
                 }
-                if (strzal == liczba) {
-                    alert("Trafiony!");
+                proby++;
+                if (strzal == liczba)
+                {
+                    alert("Trafiony! Zgadłeś w " + proby + " próbach.");
                     trafiony = true;
-                } else if (strzal > liczba) {
+                } else if (strzal > liczba)
+                {
                     alert("Za dużo!");
-                } else {
+                } else
+                {
                     alert("Za mało!");
                 }
             }

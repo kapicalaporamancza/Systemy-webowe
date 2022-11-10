@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+
+    <meta charset="utf-8">
+    <title>Zgadywanka</title>
+    <meta name="description" content="Zgadywanki">
+    <meta name="author" content="Kacper Suchanek, Tomasz Płóciennik">
+    <meta name="keywords" content="zagadka, Zgadywanka">
+
+</head>
+
+<body>
+
+    <h1>Zgadywanka</h1>
+    <p>Wylosowałem liczbę od 1 do 100. Zgadnij ją w 3 próbach.</p>
+    <div class="form">
+        <input type="number" id="answer" />
+        <input type="submit" value="Sprawdź" id="check" />
+    </div>
+    <div id="wynik"></div>
+    <script>
+        var liczba = Math.floor(Math.random() * 100) + 1;
+        var licznik = 0;
+        var proby = 3;
+        var trafiony = false;
+        document.getElementById("check").onclick = function () {
+            if (trafiony) {
+                dokument.getElementById("wynik").innerHTML = "Już wygrałeś!";
+                return;
+            }
+            if (proby == 0) {
+                document.getElementById("wynik").innerHTML = "Przegrałeś!";
+                return;
+            }
+            proby--;
+            licznik++;
+            var strzal = document.getElementById("answer").value;
+            if (isNaN(strzal)) {
+                document.getElementById("wynik").innerHTML = "To nie jest liczba!";
+                return;
+            }
+            if (strzal < 1 || strzal > 100) {
+                document.getElementById("wynik").innerHTML = "Liczba spoza zakresu!";
+                return;
+            }
+            if (strzal == liczba) {
+                document.getElementById("wynik").innerHTML = "Trafiony! Zgadłeś w " + licznik + " próbach.";
+                trafiony = true;
+            } else if (strzal > liczba) {
+                document.getElementById("wynik").innerHTML = "Za dużo! Pozostało prób: " + proby;
+            } else {
+                document.getElementById("wynik").innerHTML = "Za mało! Pozostało prób: " + proby;
+            }
+        }
+    </script>
+</body>

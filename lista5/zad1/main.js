@@ -22,10 +22,10 @@ function fun3() {
     let p = document.getElementById("p1")
     p.innerHTML = "paragraph"
     const s1 = prompt("Enter number:")
-    if (parseInt(s1) > 0 && parseInt(s1) < 20) {
-        let n = 0
+    if (parseInt(s1) > 0 && parseInt(s1) <= 20) {
+        let n = 1
 
-        while (n < s1) {
+        while (n <= s1) {
             p.innerHTML += `<br> ${n}`
             n++
         }
@@ -34,8 +34,8 @@ function fun3() {
         fun3()
     }
 }
-const b2 = document.getElementById("but2")
-const b1 = document.getElementById("but1")
+let b2 = document.getElementById("but2")
+var b1 = document.getElementById("but1")
 const b3 = document.getElementById("but3")
 
 function buttonCol() {
@@ -51,7 +51,6 @@ b2.onclick = () => {
 }
 
 b1.addEventListener("mouseover", buttonCol)
-// b1.addEventListener("mouseout", b1.style.backgroundColor = " #d6d6c2")
 document.addEventListener("click", randomNum)
 
 b3.addEventListener("click", fun3)

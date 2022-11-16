@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>My test page</title>
+
+    <style>
+        body {
+            font-size: 18px;
+        }
+
+        #mainHeader {
+            cursor: pointer;
+        }
+
+        #div1 {
+            position: absolute;
+            top: 150px;
+        }
+
+        .child {
+            margin-top: 10px;
+        }
+
+        button {
+            margin: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 id="mainHeader">Example page for presenting JS functions</h1>
+
+    <div id="div1">The text above will be created dynamically.
+        <div id="firstChild" class="child">firstChild</div>
+        <div id="secondChild" class="child">secondChild</div>
+        <div id="thirdChild" class="child">thirdChild</div>
+        <button id="but1">Replace child 2 and remove child 3</button>
+        <ol>
+            <li>item 1</li>
+            <li id="item">item 2</li>
+            <li>item 3</li>
+            <li>item 4</li>
+        </ol>
+        <button id="but2">add list element</button>
+    </div>
+    <script src="main.js"></script>
+</body>
+
+</html>

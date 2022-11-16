@@ -16,9 +16,13 @@
         }
 
         img {
-            width: 15%;
-            height: 15%;
+            width: 10%;
+            height: 10%;
 
+        }
+
+        #img1 {
+            cursor: pointer;
         }
     </style>
 </head>
@@ -27,7 +31,7 @@
     <h1 id="mainHeader">Example page for presenting JS functions</h1>
     <div id="container">
         <a href="https://pwr.edu.pl/">Politechnika Wrocławska</a>
-        <img src="img/img1.jpg" alt="img1">
+        <img id="img1" src="img/img1.jpg" alt="img1">
         <form id="form1">
             <input type="button" onclick="alert(document.forms[0].id);" value="first form" />
         </form>
@@ -38,7 +42,7 @@
         </form>
         <a href="https://wbliw.pwr.edu.pl/">Wydział budownictwa</a>
         <img src="img/img3.jpg" alt="img3">
-        <a href="https://wch.pwr.edu.pl/">Wydział chemiczny</a>
+        <a href="https://wch.pwr.edu.pl/" name="Wydział chemiczny">Wydział chemiczny</a>
 
 
         <form id="form3">
@@ -46,7 +50,9 @@
         </form>
     </div>
 
-    <div id="result">Result:</div>
+    <div id="result">Result 1:</div>
+    <br /><br />
+    <div id="result2">Result 2:</div>
 
     <script src="main.js"></script>
 </body>

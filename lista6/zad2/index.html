@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>My test page</title>
+
+    <style>
+        body {
+            font-size: 18px;
+        }
+
+        #mainHeader {
+            cursor: pointer;
+            margin-bottom: 50px;
+        }
+
+        img {
+            width: 15%;
+            height: 15%;
+
+        }
+    </style>
+</head>
+
+<body>
+    <h1 id="mainHeader">Example page for presenting JS functions</h1>
+    <div id="container">
+        <a href="https://pwr.edu.pl/">Politechnika Wrocławska</a>
+        <img src="img/img1.jpg" alt="img1">
+        <form id="form1">
+            <input type="button" onclick="alert(document.forms[0].id);" value="first form" />
+        </form>
+        <a href="https://wa.pwr.edu.pl/">Wydział architektury</a>
+        <img src="img/img2.jpg" alt="img2">
+        <form id="form2">
+            <input type="button" onclick="alert(document.forms[1].id);" value="second form" />
+        </form>
+        <a href="https://wbliw.pwr.edu.pl/">Wydział budownictwa</a>
+        <img src="img/img3.jpg" alt="img3">
+        <a href="https://wch.pwr.edu.pl/">Wydział chemiczny</a>
+
+
+        <form id="form3">
+            <input type="button" onclick="alert(document.forms[2].id);" value="third form" />
+        </form>
+    </div>
+
+    <div id="result">Result:</div>
+
+    <script src="main.js"></script>
+</body>
+
+</html>

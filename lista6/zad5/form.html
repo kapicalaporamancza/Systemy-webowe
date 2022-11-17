@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+
+    <meta charset="utf-8">
+    <title>Wrocław - miasto spotkań</title>
+    <meta name="description" content="Jest to przykładowa witryna dotycząca miasta Wrocławia">
+    <meta name="author" content="Kacper Suchanek, Tomasz Płóciennik">
+    <meta name="keywords" content="Wrocław,miasto,zwiedzanie,województwo dolnośląskie,polska">
+
+</head>
+
+<body>
+    <form action="form.html" method="get" autocomplete="on">
+
+        <label for="name">Imię:</label><br>
+        <input type="text" name="name" id="name" placeholder="Jan" autofocus><br>
+
+        <label for="surname">Nazwisko:</label><br>
+        <input type="text" name="surname" id="surname" placeholder="Kowalski"><br>
+
+        <label for="birthdate">Miesiąc urodzenia:</label><br>
+        <input list="months" name="birthdate" id="birthdate"><br>
+        <datalist id="months">
+            <option value="Styczeń">
+            <option value="Luty">
+            <option value="Marzec">
+            <option value="Kwiecień">
+            <option value="Maj">
+            <option value="Czerwiec">
+            <option value="Lipiec">
+            <option value="Sierpień">
+            <option value="Wrzesień">
+            <option value="Październik">
+            <option value="Listopad">
+            <option value="Grudzień">
+        </datalist>
+
+        <label for="email">Adres e-mail:</label><br>
+        <input type="email" name="email" id="email" placeholder="email@example.com" required>
+        email@example.domain<br>
+
+        <label for="phone">Numer telefonu:</label><br>
+        <input type="tel" name="phone" id="phone" placeholder="+48 123-456-789" pattern="\+[0-9]{2} [0-9]{3}-[0-9]{3}-[0-9]{3}" required>
+        +XX XXX-XXX-XXX<br>
+
+        
+        <input type="submit" value="Wyślij">
+        <input type="reset" value="Wyczyść"><br>
+
+
+    </form>
+
+    <br><br>
+    <a href="index.html">Powrót na stronę główną</a>
+</body>

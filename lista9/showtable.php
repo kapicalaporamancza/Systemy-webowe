@@ -26,6 +26,12 @@ if (isset($_POST['phone']) && $_POST['phone'] != '') {
 
 $result = mysqli_query($connection, $sql);
 
+if (!$result) {
+    echo mysqli_error($connection);
+    die;
+}
+mysql_close($connection);
+
 
 echo '<form action="showtable.php" method="post">
     <label for="login">Login</label>

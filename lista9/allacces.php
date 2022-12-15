@@ -34,13 +34,16 @@ if (isset($_POST['color']) && isset($_POST['size']) && isset($_POST['font'])) {
 
 <body>
     <?php
-    if (isset($_SESSION['login']) && isset($_SESSION['password'])) {
+    if (isset($_SESSION['login'])) {
         echo "<h1>Witaj " . $_SESSION['login'] . "</h1>";
         echo "<a href='logout.php'>Wyloguj</a>";
+        echo "<a <a href='form.php'>Zmień swoje dane</a>";
+
     }
     else{
         echo "Nie jesteś zalogowany (ale masz dostęp)<br>";
         echo "<a <a href='login.php'>Zaloguj się</a>";
+        echo "<a <a href='form.php'>Zarejestruj się</a>";
     }
     
     

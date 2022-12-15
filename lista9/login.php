@@ -29,10 +29,14 @@ include("sessionTimeout.php");
 
     <?php
     if (isset($_POST['login']) && isset($_POST['password'])) {
-        if ($_POST['login'] == "admin" && $_POST['password'] == "admin") {
+        $connection = mysqli_connect("localhost","root","","test");
+        $sql = "SELECT * FROM users WHERE login = '" . $_POST['login'] . "'";
+        $result = mysqli_query($connection, $sql);
+        $row = mysqli_fetch_assoc($result);
+        if (password_verify($_POST['password'], $row['password'])) {
             $_SESSION['login'] = $_POST['login'];
-            $_SESSION['password'] = $_POST['password'];
             $_SESSION['TIMEOUT'] = $_SERVER['REQUEST_TIME'] + 120;
+            echo password_hash($_POST['password'], PASSWORD_DEFAULT);
             header("Location: index.php");
         } else {
             echo "Zły login lub hasło";

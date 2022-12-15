@@ -1,5 +1,6 @@
 <?php
 include("sessionTimeout.php");
+include("requireLogin.php")
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -34,17 +35,11 @@ if (isset($_POST['color']) && isset($_POST['size']) && isset($_POST['font'])) {
 
 <body>
     <?php
-    if (isset($_SESSION['login']) && isset($_SESSION['password'])) {
+    if (isset($_SESSION['login'])) {
         echo "<h1>Witaj " . $_SESSION['login'] . "</h1>";
         echo "<h1><a href='logout.php'>Wyloguj</a></h1>";
-    }
-    else{
-        echo "Nie jesteś zalogowany<br>";
-        echo "<a href='login.php'>Zaloguj się</a>";
-        echo "<br><a href='allacces.php'>Możesz też przejść na stronę nie wymagającą logowania</a>";
-        die;
-    }
-    
+        echo "<h1><a href='form.php'>Zmień swoje dane</a></h1>";
+    }    
     
     ?>
     <div>

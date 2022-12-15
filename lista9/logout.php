@@ -1,3 +1,7 @@
+<?php
+include("sessionTimeout.php");
+include("requireLogin.php")
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -15,8 +19,7 @@
     <a href="login.php">Zaloguj się</a>
 
     <?php
-        session_start();
-        if (isset($_SESSION['login']) && isset($_SESSION['password'])) {
+        if (isset($_SESSION['login'])) {
             session_unset();
 
             session_destroy();

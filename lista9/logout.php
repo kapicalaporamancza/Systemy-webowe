@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>My test page</title>
+    <title>Wylogowano</title>
 
 </head>
 
@@ -14,11 +14,13 @@
     <a href="index.php">Wróć do strony głównej</a>
     <a href="login.php">Zaloguj się</a>
 
-<?php
-    session_start();    
-    if (isset($_SESSION['login']) && isset($_SESSION['password'])) {
-    session_destroy();
-    }
+    <?php
+        session_start();
+        if (isset($_SESSION['login']) && isset($_SESSION['password'])) {
+            session_unset();
+
+            session_destroy();
+        }
 
 ?>
 

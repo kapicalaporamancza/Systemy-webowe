@@ -6,7 +6,7 @@ include("sessionTimeout.php");
 
 <head>
     <meta charset="utf-8">
-    <title>Strona główna</title>
+    <title>Bez logowania</title>
     <style>
         <?php
 if (isset($_POST['color']) && isset($_POST['size']) && isset($_POST['font'])) {
@@ -36,26 +36,24 @@ if (isset($_POST['color']) && isset($_POST['size']) && isset($_POST['font'])) {
     <?php
     if (isset($_SESSION['login']) && isset($_SESSION['password'])) {
         echo "<h1>Witaj " . $_SESSION['login'] . "</h1>";
-        echo "<h1><a href='logout.php'>Wyloguj</a></h1>";
+        echo "<a href='logout.php'>Wyloguj</a>";
     }
     else{
-        echo "Nie jesteś zalogowany<br>";
-        echo "<a href='login.php'>Zaloguj się</a>";
-        echo "<br><a href='allacces.php'>Możesz też przejść na stronę nie wymagającą logowania</a>";
-        die;
+        echo "Nie jesteś zalogowany (ale masz dostęp)<br>";
+        echo "<a <a href='login.php'>Zaloguj się</a>";
     }
     
     
     ?>
     <div>
-        <h1>Ta strona jest dostępna tylko po zalogowaniu</h1>
+        <h1>Ta strona jest dostępna dla wszystkich</h1>
     </div>
     <form action="index.php" method="post">
         <label for="color">Color</label>
         <input type="color" id="color" name="color">
 
         <label for="size">Size</label>
-        <input type="number" id="size" name="size" min="0" max="50" value="20">
+        <input type="number" id="size" name="size" min="0" max="50" value="0">
 
         <label for="font">Font</label>
         <select id="font" name="font">

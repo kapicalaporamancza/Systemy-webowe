@@ -6,7 +6,7 @@ include("sessionTimeout.php");
 
 <head>
     <meta charset="utf-8">
-    <title>My test page</title>
+    <title>Zaloguj się</title>
 
 </head>
 

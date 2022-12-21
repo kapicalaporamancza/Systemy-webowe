@@ -30,7 +30,7 @@ if (!$result) {
     echo mysqli_error($connection);
     die;
 }
-mysql_close($connection);
+mysqli_close($connection);
 
 
 echo '<form action="showtable.php" method="post">

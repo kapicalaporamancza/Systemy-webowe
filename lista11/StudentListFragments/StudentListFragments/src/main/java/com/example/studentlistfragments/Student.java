@@ -4,14 +4,14 @@ public class Student {
     private long id;
     private String firstName;
     private String lastName;
-    private int index;
+    private String index;
     private String login;
     private String password;
 
     public Student() {
     }
 
-    public Student(long id, String firstName, String lastName, int index, String login, String password) {
+    public Student(long id, String firstName, String lastName, String index, String login, String password) {
         this.id = id;
         this.firstName = firstName;
         this.lastName = lastName;
@@ -44,11 +44,11 @@ public class Student {
         this.lastName = lastName;
     }
 
-    public int getIndex() {
+    public String getIndex() {
         return index;
     }
 
-    public void setIndex(int index) {
+    public void setIndex(String index) {
         this.index = index;
     }
 

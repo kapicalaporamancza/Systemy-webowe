@@ -13,9 +13,9 @@ public class StudentService {
     }
 
     public void seed(){
-        studentList.add(new Student(1,"Adam","Fox",12345,"stud1","abc"));
-        studentList.add(new Student(2,"Ewa","Snake",12346,"stud2","aaa"));
-        studentList.add(new Student(3,"John","Brown",22222,"stud3","eightstars"));
+        studentList.add(new Student(1,"Adam","Fox","12345","stud1","abc"));
+        studentList.add(new Student(2,"Ewa","Snake","12346","stud2","aaa"));
+        studentList.add(new Student(3,"John","Brown","22222","stud3","eightstars"));
     }
 
     private boolean isEmpty() {

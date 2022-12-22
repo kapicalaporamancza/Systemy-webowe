@@ -25,6 +25,7 @@
               <th class="text-left">Nazwa produktu</th>
               <th class="text-left">Waga [kg]</th>
               <th class="text-left">Cena [pln]</th>
+              <th class="text-left">Kategoria</th>
               <th class="text-center" colspan="3">Action</th>
             </tr>
             </thead>
@@ -34,6 +35,7 @@
               <td class="text-left"th:text= "${student.getFirstName()}"></td>
               <td class="text-left" th:text= "${student.getLastName()}"></td>
               <td class="text-center" th:text= "${student.getIndex()}"></td>
+              <td class="text-center" th:text= "${student.getLogin()}"></td>
               <td><a class="btn btn-primary" th:href="@{/student/details(id=${student.id})}">details</a></td>
               <td><a class="btn btn-primary" th:href="@{/student/{studentId}/edit(studentId=${student.getId()})}">edit</a></td>
               <td><a class="btn btn-danger" th:href="@{/student/remove(id=${student.id})}">remove</a></td>

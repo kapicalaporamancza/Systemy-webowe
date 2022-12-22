@@ -14,6 +14,10 @@ public class ProductService {
 
     public void seed() {
         productList.add(new Product(1, "Chleb", 0.8, 12, "pieczywo"));
+        productList.add(new Product(2, "Mleko", 1.5, 5, "nabiał"));
+        productList.add(new Product(3, "Ser", 0.5, 10, "nabiał"));
+        productList.add(new Product(4, "Jajka", 0.3, 6, "nabiał"));
+        productList.add(new Product(5, "Czekolada", 2, 3, "słodycze"));
     }
 
     private boolean isEmpty() {

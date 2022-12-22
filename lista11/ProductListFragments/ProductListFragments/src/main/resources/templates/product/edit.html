@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org en">
+
+<head>
+  <meta charset="text/html; UTF-8">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <title>Edytuj produkt</title>
+</head>
+
+<body>
+  <header th:replace="fragment/header::myheader"> </header>
+  <main>
+    <h1>Edytuj produkt</h1>
+    <form action="#" th:action="@{/product/edit}" th:object="${product}" method="post">
+      <p>Id: <input type="number" th:field="*{id}" /></p>
+      <p>Nazwa produktu: <input type="text" th:field="*{name}" /></p>
+      <p>Waga [kg]: <input type="number" th:field="*{weight}" /></p>
+      <p>Cena [pln]: <input type="number" th:field="*{price}" /></p>
+      <p>Kategoria: <input type="text" th:field="*{category}" /></p>
+      <p><input type="submit" value="Modify" /> <input type="reset" value="Reset" /></p>
+    </form>
+  </main>
+  <footer th:replace="fragment/footer::myfooter"> </footer>
+</body>
+
+</html>

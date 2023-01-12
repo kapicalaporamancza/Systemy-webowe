@@ -63,6 +63,10 @@ public class CategoryController {
     // e.a. /student/remove?id=3
     @GetMapping("/category/remove")
     public String remove(@RequestParam("id") long id) {
+        List<Product> productList = categoryService.getAllProductByCategoryId(id);
+        for (Product product : productList) {
+            categoryService.deleteProductById(product.getId());
+        }
         categoryService.deleteCategoryById(id);
         return "redirect:/product/";
     }

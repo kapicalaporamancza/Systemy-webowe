@@ -1,4 +1,4 @@
-package com.example.studentlistfragments;
+package com.example.productlistfragments;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -38,6 +38,9 @@ public class ProductController {
 
     @GetMapping("/product/add")
     public String add(Model model) {
+        //pass category list to the view
+        List<Category> categoryList = categoryService.getAllCategory();
+        model.addAttribute("category", categoryList );
         model.addAttribute("product", new Product() );
         return "product/add";
     }
@@ -61,6 +64,8 @@ public class ProductController {
     // e.a. /student/3/edit
     @GetMapping(value = {"/product/{studId}/edit"})
     public String edit(Model model, @PathVariable Integer studId) {
+        List<Category> categoryList = categoryService.getAllCategory();
+        model.addAttribute("category", categoryList );
         model.addAttribute("product", productService.getProductById(studId) );
         return "/product/edit";
     }

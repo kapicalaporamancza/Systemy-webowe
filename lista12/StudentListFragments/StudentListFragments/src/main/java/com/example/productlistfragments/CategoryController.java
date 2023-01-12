@@ -1,4 +1,4 @@
-package com.example.studentlistfragments;
+package com.example.productlistfragments;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;

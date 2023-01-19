@@ -1,0 +1,22 @@
+
+<header th:fragment="myheader" xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="/">Strona główna</a>
+            </div>
+            <ul class="nav navbar-nav">
+                <li><a href="/admin/product/add" sec:authorize="hasRole('ADMIN')">Dodaj produkt</a></li>
+                <li><a href="/admin/product/addCategory" sec:authorize="hasRole('ADMIN')">Dodaj kategorię</a></li>
+                <li><a href="/user/products" sec:authorize="hasAnyRole('USER', 'ADMIN')">Produkty</a></li>
+                <li><a href="/logout" sec:authorize="hasAnyRole('USER', 'ADMIN')">Wyloguj</a></li>
+                <li><a href="/login" sec:authorize="!hasAnyRole('USER', 'ADMIN')">Zaloguj</a></li>
+
+            </ul>
+            <div sec:authorize="hasRole('ADMIN')">Witaj administratorze!</div>
+            <div sec:authorize="hasRole('USER')">Witaj użyszkodniku!</div>
+        </div>
+
+    
+    </nav>
+</header>

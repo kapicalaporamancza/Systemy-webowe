@@ -1,0 +1,24 @@
+<header th:fragment="myheader">
+    <!-- Header, menu as a fragment in fragment/layout.html -->
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="#">Lista produktów</a>
+            </div>
+            <ul class="nav navbar-nav">
+                <li class="active"><a href="/product/">Home</a></li>
+                <li><a href="/product/add">Dodaj produkt</a></li>
+            </ul>
+        </div>
+    </nav>
+</header>
+<-- This will be not used -->
+<p>
+    Not used part.
+</p>
+<footer th:fragment="myfooter">
+    <p>
+        Kacper Suchanek & Tomasz Płóciennik<br>
+        All rights reserved &copy;
+    </p>
+</footer>

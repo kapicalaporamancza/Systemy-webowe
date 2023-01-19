@@ -38,7 +38,7 @@
             <td class="text-left" th:text="${product.getWeight()}"></td>
             <td class="text-center" th:text="${product.getPrice()}"></td>
             <td class="text-center" th:text="${product.getCategory()}"></td>
-            <td><a class="btn btn-primary" th:href="@{/user/product/addToCart(id=${product.id})}">Dodaj ko koszyka</a></td>
+            <td><a class="btn btn-primary" th:href="@{/user/addToCart(id=${product.id})}">Dodaj ko koszyka</a></td>
           </tr>
         </tbody>
       </table>
